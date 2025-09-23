@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Instagram Feed Clone</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instagram Feed Clone</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 <head>
     <style>
@@ -14,7 +14,6 @@
 
         img {
             border-radius: 5%;
-            
         }
 
         .btn-gear {
@@ -37,6 +36,13 @@
             border-right: 5px solid transparent;
             border-bottom: 0;
             border-left: 5px solid transparent;
+        }
+
+        /* agreguee que linita el ancho del feed */
+        .feed-wrapper {
+            max-width: 800px;
+            /* es mimso ancho que usa Instagram */
+            width: 90%;
         }
     </style>
 </head>
@@ -69,8 +75,8 @@
         </div>
     </nav>
 
- 
-    <div class="container my-4">
+
+    <div class="container my-5">
         <div class="row align-items-center">
             <div class="col-3 text-center">
                 <img src="https://picsum.photos/150" class="rounded-circle img-fluid" alt="profile">
@@ -86,7 +92,7 @@
     </div>
 
 
-    <div class="container text-center my-3">
+    <div class="container text-center my-5">
         <ul class="nav nav-tabs justify-content-center" id="viewTabs" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid-view"
@@ -104,95 +110,194 @@
     </div>
 
 
-    <div class="container tab-content" id="content-area">
+    <!-- se cambio: se envolcio el contenido en un contenedor centrado -->
+    <div class="container d-flex justify-content-center">
+        <div class="feed-wrapper tab-content" id="content-area">
+            <!-- contenido grid -->
 
+            <div class="tab-pane fade show active" id="grid-view" role="tabpanel" aria-labelledby="grid-tab">
+                <div class="row row-cols-3 g-2">
+                    <div class="col"><img src="https://picsum.photos/400?random=17" class="img-fluid" alt="post1"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=25" class="img-fluid" alt="post2"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=33" class="img-fluid" alt="post3"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=42" class="img-fluid" alt="post4"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=54" class="img-fluid" alt="post5"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=61" class="img-fluid" alt="post6"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=74" class="img-fluid" alt="post7"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=85" class="img-fluid" alt="post8"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=92" class="img-fluid" alt="post9"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=10" class="img-fluid" alt="post1"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=12" class="img-fluid" alt="post2"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=13" class="img-fluid" alt="post3"></div>
 
-        <div class="tab-pane fade show active" id="grid-view" role="tabpanel" aria-labelledby="grid-tab">
-            <div class="row row-cols-3 g-2">
-                <div class="col"><img src="https://picsum.photos/400?random=1" class="img-fluid" alt="post1"></div>
-                <div class="col"><img src="https://picsum.photos/400?random=2" class="img-fluid" alt="post2"></div>
-                <div class="col"><img src="https://picsum.photos/400?random=3" class="img-fluid" alt="post3"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=14" class="img-fluid" alt="post4"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=15" class="img-fluid" alt="post5"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=16" class="img-fluid" alt="post6"></div>
 
-                <div class="col"><img src="https://picsum.photos/400?random=4" class="img-fluid" alt="post4"></div>
-                <div class="col"><img src="https://picsum.photos/400?random=5" class="img-fluid" alt="post5"></div>
-                <div class="col"><img src="https://picsum.photos/400?random=6" class="img-fluid" alt="post6"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=17" class="img-fluid" alt="post7"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=18" class="img-fluid" alt="post8"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=19" class="img-fluid" alt="post9"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=11" class="img-fluid" alt="post1"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=20" class="img-fluid" alt="post2"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=30" class="img-fluid" alt="post3"></div>
 
-                <div class="col"><img src="https://picsum.photos/400?random=7" class="img-fluid" alt="post7"></div>
-                <div class="col"><img src="https://picsum.photos/400?random=8" class="img-fluid" alt="post8"></div>
-                <div class="col"><img src="https://picsum.photos/400?random=9" class="img-fluid" alt="post9"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=40" class="img-fluid" alt="post4"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=50" class="img-fluid" alt="post5"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=60" class="img-fluid" alt="post6"></div>
 
- 
+                    <div class="col"><img src="https://picsum.photos/400?random=7" class="img-fluid" alt="post7"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=8" class="img-fluid" alt="post8"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=9" class="img-fluid" alt="post9"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=7" class="img-fluid" alt="post7"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=8" class="img-fluid" alt="post8"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=9" class="img-fluid" alt="post9"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=1" class="img-fluid" alt="post1"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=2" class="img-fluid" alt="post2"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=3" class="img-fluid" alt="post3"></div>
+
+                    <div class="col"><img src="https://picsum.photos/400?random=4" class="img-fluid" alt="post4"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=5" class="img-fluid" alt="post5"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=6" class="img-fluid" alt="post6"></div>
+
+                    <div class="col"><img src="https://picsum.photos/400?random=78" class="img-fluid" alt="post7"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=88" class="img-fluid" alt="post8"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=948" class="img-fluid" alt="post9">
+                    </div>
+                    <div class="col"><img src="https://picsum.photos/400?random=14" class="img-fluid" alt="post1"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=27" class="img-fluid" alt="post2"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=38" class="img-fluid" alt="post3"></div>
+
+                    <div class="col"><img src="https://picsum.photos/400?random=43" class="img-fluid" alt="post4"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=55" class="img-fluid" alt="post5"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=64" class="img-fluid" alt="post6"></div>
+
+                    <div class="col"><img src="https://picsum.photos/400?random=75" class="img-fluid" alt="post7"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=82" class="img-fluid" alt="post8"></div>
+                    <div class="col"><img src="https://picsum.photos/400?random=97" class="img-fluid" alt="post9"></div>
+
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="feed-view" role="tabpanel" aria-labelledby="feed-tab">
+                <!-- Publicación 1x1 -->
+                <div class="card mb-4">
+                    <div class="card-header bg-white d-flex justify-content-between">
+                        <strong>Ciudad </strong>
+                        <small class="text-muted">18/37</small>
+                    </div>
+                    <img src="https://picsum.photos/600/400?random=1" class="card-img-top" alt="post3">
+                    <div class="card-body">
+                        <p class="mb-1"><strong>8090 Likes</strong></p>
+                        <p class="mb-1">La mejor ciudad que vi </p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header bg-white d-flex justify-content-between">
+                        <strong>Ciudad </strong>
+                        <small class="text-muted">21/09</small>
+                    </div>
+                    <img src="https://picsum.photos/600/400?random=2" class="card-img-top" alt="post4">
+                    <div class="card-body">
+                        <p class="mb-1"><strong>8910 Likes</strong></p>
+                        <p class="mb-1">La mejor ciudad que vi </p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header bg-white d-flex justify-content-between">
+                        <strong>Ciudad </strong>
+                        <small class="text-muted">05/02</small>
+                    </div>
+                    <img src="https://picsum.photos/600/400?random=3" class="card-img-top" alt="post5">
+                    <div class="card-body">
+                        <p class="mb-1"><strong>2541 Likes</strong></p>
+                        <p class="mb-1">La mejor ciudad que vi </p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header bg-white d-flex justify-content-between">
+                        <strong>Ciudad </strong>
+                        <small class="text-muted">21/09</small>
+                    </div>
+                    <img src="https://picsum.photos/600/400?random=4" class="card-img-top" alt="post4">
+                    <div class="card-body">
+                        <p class="mb-1"><strong>8910 Likes</strong></p>
+                        <p class="mb-1">La mejor ciudad que vi </p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header bg-white d-flex justify-content-between">
+                        <strong>De camino a esto</strong>
+                        <small class="text-muted">08/02</small>
+                    </div>
+                    <img src="https://picsum.photos/600/400?random=5" class="card-img-top" alt="post2">
+                    <div class="card-body">
+                        <p class="mb-1"><strong>5167 Likes</strong></p>
+                        <p class="mb-1">disfrutar con amistades !!</p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header bg-white d-flex justify-content-between">
+                        <strong>Ciudad </strong>
+                        <small class="text-muted">05/02</small>
+                    </div>
+                    <img src="https://picsum.photos/600/400?random=6" class="card-img-top" alt="post5">
+                    <div class="card-body">
+                        <p class="mb-1"><strong>2541 Likes</strong></p>
+                        <p class="mb-1">La mejor ciudad que vi </p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header bg-white d-flex justify-content-between">
+                        <strong>Que es esto!</strong>
+                        <small class="text-muted">08/01</small>
+                    </div>
+                    <img src="https://picsum.photos/600/400?random=7" class="card-img-top" alt="post1">
+                    <div class="card-body">
+                        <p class="mb-1"><strong>1234 Likes</strong></p>
+                        <p class="mb-1">Curso regular de alta montaña</p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header bg-white d-flex justify-content-between">
+                        <strong>Ciudad </strong>
+                        <small class="text-muted">18/37</small>
+                    </div>
+                    <img src="https://picsum.photos/600/400?random=8" class="card-img-top" alt="post3">
+                    <div class="card-body">
+                        <p class="mb-1"><strong>8090 Likes</strong></p>
+                        <p class="mb-1">La mejor ciudad que vi </p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header bg-white d-flex justify-content-between">
+                        <strong>Ciudad </strong>
+                        <small class="text-muted">21/09</small>
+                    </div>
+                    <img src="https://picsum.photos/600/400?random=9" class="card-img-top" alt="post4">
+                    <div class="card-body">
+                        <p class="mb-1"><strong>8910 Likes</strong></p>
+                        <p class="mb-1">La mejor ciudad que vi </p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header bg-white d-flex justify-content-between">
+                        <strong>Ciudad </strong>
+                        <small class="text-muted">05/02</small>
+                    </div>
+                    <img src="https://picsum.photos/600/400?random=10" class="card-img-top" alt="post5">
+                    <div class="card-body">
+                        <p class="mb-1"><strong>2541 Likes</strong></p>
+                        <p class="mb-1">La mejor ciudad que vi </p>
+                    </div>
+                </div>
+                <!-- Publicación 1x1 fin -->
+                <!-- agregar mas cards igual... -->
             </div>
         </div>
-
-
-        <div class="tab-pane fade" id="feed-view" role="tabpanel" aria-labelledby="feed-tab">
-
-            <div class="card mb-4">
-                <div class="card-header bg-white d-flex justify-content-between">
-                    <strong>Que es esto!</strong>
-                    <small class="text-muted">08/01</small>
-                </div>
-                <img src="https://picsum.photos/600/400?random=1" class="card-img-top" alt="post1">
-                <div class="card-body">
-                    <p class="mb-1"><strong>1234 Likes</strong></p>
-                    <p class="mb-1">Curso regular de alta montaña</p>
-                </div>
-            </div>
-
-
-            <div class="card mb-4">
-                <div class="card-header bg-white d-flex justify-content-between">
-                    <strong>De camino a esto</strong>
-                    <small class="text-muted">08/02</small>
-                </div>
-                <img src="https://picsum.photos/600/400?random=2" class="card-img-top" alt="post2">
-                <div class="card-body">
-                    <p class="mb-1"><strong>5167 Likes</strong></p>
-                    <p class="mb-1">disfrutar con amistades !!</p>
-                </div>
-            </div>
-
-
-            <div class="card mb-4">
-                <div class="card-header bg-white d-flex justify-content-between">
-                    <strong>Ciudad </strong>
-                    <small class="text-muted">18/37</small>
-                </div>
-                <img src="https://picsum.photos/600/400?random=3" class="card-img-top" alt="post3">
-                <div class="card-body">
-                    <p class="mb-1"><strong>8090 Likes</strong></p>
-                    <p class="mb-1">La mejor ciudad que vi </p>
-                </div>
-            </div>
-            <div class="card mb-4">
-                <div class="card-header bg-white d-flex justify-content-between">
-                    <strong>Ciudad </strong>
-                    <small class="text-muted">21/09</small>
-                </div>
-                <img src="https://picsum.photos/600/400?random=3" class="card-img-top" alt="post4">
-                <div class="card-body">
-                    <p class="mb-1"><strong>8910 Likes</strong></p>
-                    <p class="mb-1">La mejor ciudad que vi </p>
-                </div>
-            </div>
-            <div class="card mb-4">
-                <div class="card-header bg-white d-flex justify-content-between">
-                    <strong>Ciudad </strong>
-                    <small class="text-muted">05/02</small>
-                </div>
-                <img src="https://picsum.photos/600/400?random=3" class="card-img-top" alt="post5">
-                <div class="card-body">
-                    <p class="mb-1"><strong>2541 Likes</strong></p>
-                    <p class="mb-1">La mejor ciudad que vi </p>
-                </div>
-            </div>
-
-           
-        </div>
-
     </div>
+    <!-- FIN bloque -->
 
+    <!-- botones superiores -->
     <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -216,7 +321,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="postImage" class="form-label">URL de la imagen</label>
-                            <input type="text" class="form-control" id="postImage">
+                            <input class="form-control" type="text" placeholder="https://" aria-label="https://" />
                         </div>
                     </form>
                 </div>
@@ -224,11 +329,22 @@
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     <button type="button" class="btn btn-primary">Publicar</button>
                 </div>
+
             </div>
+
+        </div>
+
+    </div>
+    <div class="column-gap-2">
+        <div class="row text-center">
+            <i class="--bs-success-bg-subtle">Proyecto insta Fedd - Miguel © 2025 , Alumno de " 4 Geeks Academy "</i>
         </div>
     </div>
+    </div>
+    <!-- FIN botones superiores -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 
